@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <!--[if IE]>
+            <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <![endif]-->
+
+        <link rel="icon" href="assets/img/favicon.ico" />
+        <title>gedoplan - jax</title>
+
+
+        <!-- build:css assets/styles/styles.css -->
+        <!-- injector:css -->
+        <link rel="stylesheet" href="assets/styles/angular-growl.css">
+        <link rel="stylesheet" href="assets/styles/bootstrap.css">
+        <link rel="stylesheet" href="assets/styles/dataTables.bootstrap.css">
+        <link rel="stylesheet" href="assets/styles/font-awesome.css">
+        <link rel="stylesheet" href="assets/styles/main.css">
+        <link rel="stylesheet" href="assets/styles/template.css">
+        <!-- endinjector -->
+        <!-- endbuild -->
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <div ui-view></div>
+
+        <!-- build:js scripts/ext.js -->
+        <!-- injector:bower:js -->
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/angular-resource/angular-resource.js"></script>
+        <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+        <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+        <script src="bower_components/angular-translate/angular-translate.js"></script>
+        <script src="bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
+        <script src="bower_components/datatables.net/js/jquery.dataTables.js"></script>
+        <script src="bower_components/datatables.net-bs/js/dataTables.bootstrap.js"></script>
+        <script src="bower_components/bowser/bowser.js"></script>
+        <script src="bower_components/valdr/valdr.js"></script>
+        <script src="bower_components/valdr/valdr-message.js"></script>
+        <script src="bower_components/angular-growl-v2/build/angular-growl.js"></script>
+        <!-- endinjector -->
+        <!-- endbuild -->
+
+        <!-- build:js scripts/modules.js -->
+        <!-- injector:js -->
+        <script src="app.js"></script>
+        <script src="boot.js"></script>
+        <script src="components/customer/detail/customer-detail-controller.js"></script>
+        <script src="components/customer/list/customer-list-controller.js"></script>
+        <script src="components/directives/historyBack-directive.js"></script>
+        <script src="components/home/home-controller.js"></script>
+        <script src="components/order/list/order-list-controller.js"></script>
+        <script src="services/customerService.js"></script>
+        <script src="services/orderService.js"></script>
+        <script src="services/tableHelperService.js"></script>
+        <script src="services/userService.js"></script>
+        <!-- endinjector -->
+        <!-- endbuild -->
+
+
+
+        <script src="//localhost:35729/livereload.js"></script>
+
+    </body>
+</html>

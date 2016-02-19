@@ -1,0 +1,99 @@
+.form-signin {
+    max-width: 420px;
+    padding: 30px 38px 66px;
+    margin: 0 auto;
+    background-color: #eee;
+    border: 3px dotted rgba(0,0,0,0.1);  
+}
+
+.form-signin-heading {
+    text-align:center;
+    margin-bottom: 30px;
+    color: black;
+}
+
+.form-signin .form-control {
+    position: relative;
+    font-size: 16px;
+    height: auto;
+    padding: 10px;
+}
+
+input[type="text"] {
+    margin-bottom: 0px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+input[type="password"] {
+    margin-bottom: 20px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+a
+{
+    cursor: pointer;
+}
+
+.line-blue,.line-blue-s {
+    height: 7px;
+    border-top: 0;
+    background: #48A5FF;
+}
+
+.line-blue-s {
+    height: 2px;
+    border-top: 0;
+    background: #48A5FF;
+    margin: 0px 0px 20px 0px;
+}
+
+.btn-primary
+{
+    background: #48A5FF;
+}
+
+.header-entry, .header-entry:hover, .header-entry:active, .header-entry:focus {
+    font-size:20px;
+    color:#fff;
+    font-weight:700;
+    margin-top: 10px;
+}
+
+.alert
+{
+    padding: 1px;
+}
+
+.alert .text{
+    text-align: center;
+    width: 90%;
+    display: inline;
+}
+
+input.ng-invalid.ng-touched.ng-dirty, input.ng-invalid.ng-touched.ng-dirty:focus{
+    border-left: 5px solid #c71c22;
+}
+
+.valdrmsg
+{
+    position: absolute;
+    margin-top: 2px;
+}
+
+.label-danger {
+  display: none;
+}
+
+.label-danger.ng-invalid.ng-touched.ng-dirty {
+  display: inline;
+}
+
+.btn-fix-200{
+    width: 200px;
+}
+
+span.btn-primary{
+    padding: 5px;
+}

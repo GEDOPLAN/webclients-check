@@ -1,0 +1,25 @@
+{
+  "name": "AngularJS-Starter",
+  "version": "1.0.0",
+  "ignore": [
+    ".jshintrc",
+    "**/*.txt"
+  ],
+  "dependencies": {
+    "bootstrap": "3.3.4",
+    "angular": "~1.4.9",
+    "angular-resource": "~1.4.9",
+    "angular-cookies": "~1.4.9",
+    "angular-ui-router": "~0.2.15",
+    "jquery": "~2.1.4",
+    "angular-translate": "~2.8.1",
+    "angular-translate-loader-static-files": "~2.8.1",
+    "font-awesome": "~4.5.0",
+    "datatables.net": "~1.10.10",
+    "datatables.net-bs": "~1.10.10",
+    "bowser": "~1.0.0",
+    "valdr": "~1.1.5",
+    "angular-growl-v2": "~0.7.9"
+  },
+  "devDependencies": {}
+}

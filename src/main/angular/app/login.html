@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-offset-3 col-sm-6 col-xs-12">
+            <div class="wrapper">
+                <form class="form-signin">       
+                    <h3 class="form-signin-heading">Login</h3>
+                    <hr class="line-blue"><br>
+                    <div class="alert alert-danger" role="alert" ng-show="vm.message">
+                        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                        {{vm.message}}
+                    </div>
+                    <input type="text" ng-model="vm.username" class="form-control" name="Username" placeholder="{{'login.username' | translate}}" required="" autofocus="" />
+                    <input type="password" ng-model="vm.password" class="form-control" name="Password" placeholder="{{'login.password' | translate}}" required=""/>     		  
+
+                    <button class="btn btn-lg btn-primary btn-block"  name="Submit" value="Login"  ng-click="vm.login()">Login</button>  			
+                </form>			
+            </div>
+        </div>
+    </div>
+</div>

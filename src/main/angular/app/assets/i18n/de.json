@@ -1,0 +1,44 @@
+{
+    "actions": {
+        "save": "speichern",
+        "cancel": "abbrechen"
+    },
+    "login": {
+        "username": "Benutzername",
+        "password": "Passwort",
+        "invalid": "Passwort oder Benutzername ungültig"
+    },
+    "menu": {
+        "customer": "Kunden",
+        "orders": "Bestellungen",
+        "customerdetails": "Kundendetails"
+    },
+    "customer": {
+        "id": "ID",
+        "name": "Name",
+        "contact": "Ansprechpartner",
+        "contacttitle": "Titel",
+        "street": "Strasse",
+        "zipcode": "PLZ",
+        "city": "Stadt",
+        "region": "Region",
+        "country": "Land", 
+        "phone": "Telefon",
+        "fax": "Fax", 
+        "orders": "Kundenaufträge",
+        "salesvolume": "Gesamtumsatz",
+        "discount-title": "aktuelle Rabattstufe"
+    },
+    "order": {
+        "id":"ID",
+        "orderDate":"Bestelldatum",
+        "name": "Name",
+        "freight":"Gewicht",
+        "street":"Strasse",
+        "zipcode":"PLZ",
+        "city":"Stadt"
+    },
+    "save-success": "Speichern erfolgreich",
+    "{javax.validation.constraints.Size.message}": "Ungültige Länge (min.: {{min}} )",
+    "streetformat" : "Strasse mit Hausnummer erwartet"
+}

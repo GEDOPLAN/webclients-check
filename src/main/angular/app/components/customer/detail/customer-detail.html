@@ -1,0 +1,56 @@
+<form valdr-type="Customer" novalidate name="customerForm"> 
+    <div class="row">
+        <div class="col-xs-8">{{vm.customer.companyName}} ({{vm.customer.customerID}})</div>
+        <div class="col-xs-4">
+            <span class="button-styled pull-right">{{"customer.discount-title"| translate}} <span class="badge">{{vm.custometDiscount.discount | number:2}}%</span></span>
+        </div>
+    </div>
+    <hr class="line-blue-s"/>
+    <div class="form-group col-xs-12 col-sm-3" valdr-form-group>
+        <label for="customerID" translate="customer.id"></label>
+        <input type="text" class="form-control" id="customerID" name="customerID" ng-model="vm.customer.customerID" readonly>
+    </div>
+    <div class="form-group col-xs-12 col-sm-4" valdr-form-group>
+        <label for="companyName" translate="customer.name"></label>
+        <input type="text" class="form-control" id="companyName" name="companyName" ng-model="vm.customer.companyName">
+    </div>
+    <div class="form-group col-xs-12 col-sm-4" valdr-form-group>
+        <label for="contactName" translate="customer.contact"></label>
+        <input type="text" class="form-control" id="contactName" name="contactName" ng-model="vm.customer.contactName">
+    </div>
+    <div class="form-group col-xs-12 col-sm-3" valdr-form-group>
+        <label for="address" translate="customer.street"></label>
+        <input type="text" class="form-control" id="address" name="address" ng-model="vm.customer.address">
+    </div>
+    <div class="form-group col-xs-12 col-sm-2" valdr-form-group>
+        <label for="postalCode" translate="customer.zipcode"></label>
+        <input type="text" class="form-control" id="postalCode" name="postalCode" ng-model="vm.customer.postalCode">
+    </div>
+    <div class="form-group col-xs-12 col-sm-6" valdr-form-group>
+        <label for="city" translate="customer.city"></label>
+        <input type="text" class="form-control" id="city" name="city" ng-model="vm.customer.city">
+    </div>
+    <div class="form-group col-xs-12 col-sm-3" valdr-form-group>
+        <label for="region" translate="customer.region"></label>
+        <input type="text" class="form-control" id="region" name="region" ng-model="vm.customer.region">
+    </div>
+    <div class="form-group col-xs-12 col-sm-2" valdr-form-group>
+        <label for="country" translate="customer.country"></label>
+        <input type="text" class="form-control" id="country" name="country" ng-model="vm.customer.country">
+    </div>
+    <div class="form-group col-xs-12 col-sm-3" valdr-form-group>
+        <label for="phone" translate="customer.phone"></label>
+        <input type="text" class="form-control" id="phone" name="phone" ng-model="vm.customer.phone">
+    </div>
+    <div class="form-group col-xs-12 col-sm-3" valdr-form-group>
+        <label for="fax" translate="customer.fax"></label>
+        <input type="text" class="form-control" id="fax" name="fax" ng-model="vm.customer.fax">
+    </div>     
+    <div class="form-group col-xs-12 col-sm-3 col-sm-offset-2">
+        <button ng-disabled="customerForm.$invalid" type="button" class="btn btn-primary btn-fix-200" translate="actions.save" ng-click="vm.saveCustomer()"></button>
+    </div>
+    <div class="form-group col-xs-12 col-sm-3 col-sm-offset-1">
+        <button type="button" class="btn btn-primary btn-fix-200" translate="actions.cancel" history-back></button>
+    </div>
+
+</form>

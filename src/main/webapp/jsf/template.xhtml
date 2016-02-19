@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>gedoplan, jax-demo</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+
+    <ui:insert name="meta"></ui:insert>
+    <h:body>
+
+        <h:form>  
+            <p:growl id="messages"/>
+
+            <p:menubar>
+                <p:menuitem outcome="customers">
+                    <h:link>
+                        <p:graphicImage name="jsf.png" library="img" height="60px;"/>
+                    </h:link>
+                </p:menuitem>
+
+                <p:menuitem value="Kunden" outcome="customers" class="nav-item"/>
+                <p:menuitem value="Bestellungen" outcome="orders" class="nav-item"/>
+
+                <f:facet name="options">
+                    <p:menubar styleClass="header-menu-options">
+                        <p:submenu label="#{userController.currentUser.login}">
+                            <p:menuitem value="#{msg.logout}" action="#{userController.logout}" />
+                        </p:submenu>
+                    </p:menubar>
+                </f:facet>
+            </p:menubar>
+        </h:form>
+
+        <h:panelGroup id="content">
+            <ui:insert name="content"></ui:insert>
+        </h:panelGroup>
+
+        <p:growl id="growl" showDetail="false" sticky="false" life="3000" />  
+
+        <f:facet name="last">
+            <h:outputStylesheet library="style" name="template.css" />
+        </f:facet>
+    </h:body>
+</html>

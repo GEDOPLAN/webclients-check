@@ -1,0 +1,41 @@
+<!-- HEADER SECTION START-->
+<header id="header">
+    <div class="container-fluid" >
+        <div class="row"  >
+            <div class="col-xs-8 logo-wrapper menu-links scroll-me">
+                <span class="hidden-xs"><img src="assets/img/angularl.png" alt="" /></span>
+                <a ng-hide="vm.getUser().admin" ui-sref="app.customer-list"> {{"menu.customer" | translate}} </a>
+                <a ui-sref="app.order-list"> {{"menu.orders" | translate}}</a>
+                <a ng-hide="vm.getUser().customer" ui-sref="app.customer-detail({id:vm.getUser().customerID})"> {{"menu.customerdetails" | translate}}</a>
+            </div>
+            <div class="col-xs-4 text-right" >
+                <div class="dropdown">
+                    <button class="btn-link dropdown-toggle header-entry" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        {{vm.getUser().login}}
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+                        <li><a ng-click="vm.logout()">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section id="root">
+    <div class="container" ui-view></div>
+    <div growl></div>
+</section>
+<footer class="navbar-fixed-bottom hidden-xs">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                &copy; 2016 gedoplan.de
+            </div>
+
+        </div>
+    </div>
+</footer>
+
+</body>
