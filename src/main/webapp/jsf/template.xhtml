@@ -29,7 +29,7 @@
                 <f:facet name="options">
                     <p:menubar styleClass="header-menu-options">
                         <p:submenu label="#{userController.currentUser.login}">
-                            <p:menuitem value="#{msg.logout}" action="#{userController.logout}" />
+                            <p:menuitem value="#{msg.logout}" action="#{authenticateController.logout}" />
                         </p:submenu>
                     </p:menubar>
                 </f:facet>

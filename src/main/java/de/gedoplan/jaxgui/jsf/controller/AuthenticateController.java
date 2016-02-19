@@ -1,20 +1,16 @@
 package de.gedoplan.jaxgui.jsf.controller;
 
 import javax.enterprise.context.RequestScoped;
-import javax.inject.Inject;
 import javax.inject.Named;
 import javax.servlet.ServletException;
 
 @Named
 @RequestScoped
-public class LoginController implements BaseController {
+public class AuthenticateController implements BaseController {
 
     private String loginname;
 
     private String password;
-
-    @Inject
-    private UserController userController;
 
     public String login() {
         try {
@@ -24,6 +20,11 @@ public class LoginController implements BaseController {
             return null;
         }
         return "home";
+    }
+
+    public String logout() {
+        getExternalContext().invalidateSession();
+        return "login";
     }
 
     public String getLoginname() {

@@ -15,11 +15,6 @@ public class UserController implements BaseController, Serializable {
     @CurrentUser
     private User currentUser;
 
-    public String logout() {
-        getExternalContext().invalidateSession();
-        return "login";
-    }
-
     public User getCurrentUser() {
         return currentUser;
     }
