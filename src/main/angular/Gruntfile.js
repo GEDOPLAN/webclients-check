@@ -23,7 +23,15 @@ module.exports = function (grunt) {
             },
             development: {
                 files: {
-                    'app/index.html': ['bower.json', 'app/{,components/**/,services/,resources/}*.js', 'app/assets/styles/*.css']
+                    'app/index.html': [
+                        'bower.json', 
+                        'app/{,components/**/,services/,resources/}*.js', 
+                        'app/assets/styles/*.css',
+                        'app/bower_components/angular-growl-v2/build/angular-growl.css',
+                        'app/bower_components/datatables.net-bs/css/dataTables.bootstrap.css',
+                        'app/bower_components/font-awesome/css/font-awesome.css',
+                        'app/bower_components/bootstrap/dist/css/bootstrap.css'
+                    ]
                 }
             },
             annotated: {
