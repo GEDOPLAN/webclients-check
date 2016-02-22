@@ -9,6 +9,7 @@ import de.gedoplan.jaxgui.model.dto.QuerySettings;
 import de.gedoplan.jaxgui.repository.CustomerRepository;
 import de.gedoplan.jaxgui.system.CurrentUser;
 import javax.annotation.security.RolesAllowed;
+import javax.ejb.EJBAccessException;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
 import javax.ws.rs.WebApplicationException;
@@ -60,9 +61,9 @@ public class CustomerService {
         return orderInformation;
     }
 
-    private void validateCustomerAccess(String customerId) throws WebApplicationException {
+    private void validateCustomerAccess(String customerId) {
         if (!user.isInRole(User.UserRole.ADMIN) && !user.getCustomerID().equals(customerId)) {
-            throw new WebApplicationException("Specified customer is not allowed", 403);
+            throw new EJBAccessException();
         }
     }
 }

@@ -69,6 +69,8 @@
                             if (rejection.status === 455) {
                                 $cookies.remove("authToken");
                                 $injector.get('$state').transitionTo('login');
+                            } else if (rejection.status === 456) {
+                                growl.error("Not allowed");
                             } else
                             {
                                 growl.error("Unexpected HTTP Error");
@@ -91,7 +93,7 @@
 
 // Bean Validation
                 valdrProvider.setConstraintUrl('../bvrules');
-                
+
                 valdrMessageProvider.setTemplate('<span class="label label-danger valdrmsg">{{ violation.message | translate:violation }}</span>');
 
 // Growl

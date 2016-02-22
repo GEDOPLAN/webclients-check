@@ -22,5 +22,13 @@ public class UserController implements BaseController, Serializable {
     public void setCurrentUser(User currentUser) {
         this.currentUser = currentUser;
     }
+    
+    public boolean isAdmin(){
+        return currentUser.isInRole(User.UserRole.ADMIN);
+    }
+    
+    public boolean isCustomer(){
+        return currentUser.isInRole(User.UserRole.CUSTOMER);
+    }
 
 }

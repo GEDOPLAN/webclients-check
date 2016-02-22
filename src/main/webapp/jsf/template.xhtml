@@ -23,8 +23,9 @@
                     </h:link>
                 </p:menuitem>
 
-                <p:menuitem value="Kunden" outcome="customers" class="nav-item"/>
-                <p:menuitem value="Bestellungen" outcome="orders" class="nav-item"/>
+                <p:menuitem value="#{msg.menu_customer}" outcome="customers" class="nav-item" rendered="#{userController.admin}"/>
+                <p:menuitem value="#{msg.menu_orders}" outcome="orders" class="nav-item"/>
+                <p:menuitem value="#{msg.menu_customerdetails}" outcome="orders" class="nav-item" rendered="#{userController.customer}"/>
 
                 <f:facet name="options">
                     <p:menubar styleClass="header-menu-options">

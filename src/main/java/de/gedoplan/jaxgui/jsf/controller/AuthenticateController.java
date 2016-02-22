@@ -1,5 +1,6 @@
 package de.gedoplan.jaxgui.jsf.controller;
 
+import java.security.Principal;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Named;
 import javax.servlet.ServletException;
@@ -14,7 +15,10 @@ public class AuthenticateController implements BaseController {
 
     public String login() {
         try {
-            BaseController.super.getRequest().login(loginname, password);
+            Principal userPrincipal = BaseController.super.getRequest().getUserPrincipal();
+            if (userPrincipal==null) {
+                BaseController.super.getRequest().login(loginname, password);
+            }
         } catch (ServletException ex) {
             addErrorMessage("login_invalid");
             return null;
