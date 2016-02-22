@@ -26,11 +26,9 @@ module.exports = function (grunt) {
                     'app/index.html': [
                         'bower.json', 
                         'app/{,components/**/,services/,resources/}*.js', 
-                        'app/assets/styles/*.css',
-                        'app/bower_components/angular-growl-v2/build/angular-growl.css',
-                        'app/bower_components/datatables.net-bs/css/dataTables.bootstrap.css',
                         'app/bower_components/font-awesome/css/font-awesome.css',
-                        'app/bower_components/bootstrap/dist/css/bootstrap.css'
+                        'app/assets/styles/template.css',
+                        'app/assets/styles/main.css'
                     ]
                 }
             },
@@ -42,16 +40,12 @@ module.exports = function (grunt) {
             build: {
                 options: {
                     template: 'dist/index.html',
-                    addRootSlash: false,
-                    bowerPrefix: 'ignore:',
-                    starttag: '<!-- injector:build:{{ext}} -->',
-                    endtag: '<!-- endinjectorbuild -->',
                     ignorePath: 'dist',
                 },
                 files: {
                     'dist/index.html': ['dist/assets/**/*.css', 'dist/scripts/*.js']
                 }
-            },
+            }
         },
         ngAnnotate: {
             build: {
