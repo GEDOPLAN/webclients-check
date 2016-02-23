@@ -1,6 +1,6 @@
-package de.gedoplan.jaxgui.service;
+package de.gedoplan.webclients.service;
 
-import de.gedoplan.jaxgui.model.User;
+import de.gedoplan.webclients.model.User;
 import java.io.Serializable;
 import java.util.Arrays;
 import java.util.List;

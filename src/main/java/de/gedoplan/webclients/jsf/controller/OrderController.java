@@ -1,9 +1,9 @@
-package de.gedoplan.jaxgui.jsf.controller;
+package de.gedoplan.webclients.jsf.controller;
 
-import de.gedoplan.jaxgui.model.Order;
-import de.gedoplan.jaxgui.model.dto.QueryResult;
-import de.gedoplan.jaxgui.model.dto.QuerySettings;
-import de.gedoplan.jaxgui.service.OrderService;
+import de.gedoplan.webclients.model.Order;
+import de.gedoplan.webclients.model.dto.QueryResult;
+import de.gedoplan.webclients.model.dto.QuerySettings;
+import de.gedoplan.webclients.service.OrderService;
 import java.io.Serializable;
 import javax.enterprise.context.SessionScoped;
 import javax.inject.Inject;
@@ -18,7 +18,7 @@ public class OrderController extends BaseTableController<Order> implements BaseC
 
     @Override
     public QueryResult<Order> loadData(Integer pageSize, Integer pageStart, String[] sortAttributes, String[] sortDirections) {
-        System.out.println("de.gedoplan.jaxgui.jsf.controller.OrderController.loadData()");
+        System.out.println("de.gedoplan.webclients.jsf.controller.OrderController.loadData()");
         QuerySettings querySettings = new QuerySettings(pageStart, pageSize, sortAttributes, sortDirections);
         QueryResult<Order> queryResult = customerService.queryOrders(querySettings);
 

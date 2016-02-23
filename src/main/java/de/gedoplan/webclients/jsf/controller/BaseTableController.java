@@ -1,6 +1,7 @@
-package de.gedoplan.jaxgui.jsf.controller;
+package de.gedoplan.webclients.jsf.controller;
 
-import de.gedoplan.jaxgui.model.dto.QueryResult;
+import de.gedoplan.webclients.model.dto.QueryResult;
+import de.gedoplan.webclients.model.dto.QueryResult;
 import java.util.List;
 import java.util.Map;
 import org.primefaces.model.LazyDataModel;

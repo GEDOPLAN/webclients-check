@@ -1,8 +1,8 @@
-package de.gedoplan.jaxgui.resource;
+package de.gedoplan.webclients.resource;
 
-import de.gedoplan.jaxgui.model.User;
-import de.gedoplan.jaxgui.service.UserService;
-import de.gedoplan.jaxgui.system.CurrentUser;
+import de.gedoplan.webclients.model.User;
+import de.gedoplan.webclients.service.UserService;
+import de.gedoplan.webclients.system.CurrentUser;
 import javax.inject.Inject;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;

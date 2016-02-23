@@ -1,8 +1,8 @@
-package de.gedoplan.jaxgui.model;
+package de.gedoplan.webclients.model;
 
 import com.fasterxml.jackson.annotation.JsonView;
-import de.gedoplan.jaxgui.resource.views.DetailView;
-import de.gedoplan.jaxgui.resource.views.ListView;
+import de.gedoplan.webclients.resource.views.DetailView;
+import de.gedoplan.webclients.resource.views.ListView;
 import java.io.Serializable;
 import java.util.Collection;
 import javax.persistence.CascadeType;

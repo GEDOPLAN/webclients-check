@@ -1,12 +1,12 @@
-package de.gedoplan.jaxgui.service;
+package de.gedoplan.webclients.service;
 
-import de.gedoplan.jaxgui.model.Customer;
-import de.gedoplan.jaxgui.model.User;
-import de.gedoplan.jaxgui.model.dto.CustomerOrderInformation;
-import de.gedoplan.jaxgui.model.dto.QueryResult;
-import de.gedoplan.jaxgui.model.dto.QuerySettings;
-import de.gedoplan.jaxgui.repository.CustomerRepository;
-import de.gedoplan.jaxgui.system.CurrentUser;
+import de.gedoplan.webclients.model.Customer;
+import de.gedoplan.webclients.model.User;
+import de.gedoplan.webclients.model.dto.CustomerOrderInformation;
+import de.gedoplan.webclients.model.dto.QueryResult;
+import de.gedoplan.webclients.model.dto.QuerySettings;
+import de.gedoplan.webclients.repository.CustomerRepository;
+import de.gedoplan.webclients.system.CurrentUser;
 import javax.annotation.security.RolesAllowed;
 import javax.ejb.EJBAccessException;
 import javax.ejb.Stateless;

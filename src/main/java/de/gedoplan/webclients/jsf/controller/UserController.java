@@ -1,7 +1,7 @@
-package de.gedoplan.jaxgui.jsf.controller;
+package de.gedoplan.webclients.jsf.controller;
 
-import de.gedoplan.jaxgui.model.User;
-import de.gedoplan.jaxgui.system.CurrentUser;
+import de.gedoplan.webclients.model.User;
+import de.gedoplan.webclients.system.CurrentUser;
 import java.io.Serializable;
 import javax.enterprise.context.SessionScoped;
 import javax.inject.Inject;

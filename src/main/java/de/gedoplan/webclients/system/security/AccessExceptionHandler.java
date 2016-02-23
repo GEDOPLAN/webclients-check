@@ -1,4 +1,4 @@
-package de.gedoplan.jaxgui.system.security;
+package de.gedoplan.webclients.system.security;
 
 import javax.ejb.EJBAccessException;
 import javax.servlet.http.HttpServletRequest;

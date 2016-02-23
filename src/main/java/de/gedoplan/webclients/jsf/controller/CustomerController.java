@@ -1,9 +1,9 @@
-package de.gedoplan.jaxgui.jsf.controller;
+package de.gedoplan.webclients.jsf.controller;
 
-import de.gedoplan.jaxgui.model.Customer;
-import de.gedoplan.jaxgui.model.dto.QueryResult;
-import de.gedoplan.jaxgui.model.dto.QuerySettings;
-import de.gedoplan.jaxgui.service.CustomerService;
+import de.gedoplan.webclients.model.Customer;
+import de.gedoplan.webclients.model.dto.QueryResult;
+import de.gedoplan.webclients.model.dto.QuerySettings;
+import de.gedoplan.webclients.service.CustomerService;
 import java.io.Serializable;
 import javax.enterprise.context.SessionScoped;
 import javax.inject.Inject;

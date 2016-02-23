@@ -1,12 +1,12 @@
-package de.gedoplan.jaxgui.service;
+package de.gedoplan.webclients.service;
 
-import de.gedoplan.jaxgui.model.Order;
-import de.gedoplan.jaxgui.model.User;
-import de.gedoplan.jaxgui.model.User.UserRole;
-import de.gedoplan.jaxgui.model.dto.QueryResult;
-import de.gedoplan.jaxgui.model.dto.QuerySettings;
-import de.gedoplan.jaxgui.repository.OrderRepository;
-import de.gedoplan.jaxgui.system.CurrentUser;
+import de.gedoplan.webclients.model.Order;
+import de.gedoplan.webclients.model.User;
+import de.gedoplan.webclients.model.User.UserRole;
+import de.gedoplan.webclients.model.dto.QueryResult;
+import de.gedoplan.webclients.model.dto.QuerySettings;
+import de.gedoplan.webclients.repository.OrderRepository;
+import de.gedoplan.webclients.system.CurrentUser;
 import javax.annotation.security.RolesAllowed;
 import javax.ejb.Stateless;
 import javax.inject.Inject;

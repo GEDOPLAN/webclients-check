@@ -1,7 +1,9 @@
-package de.gedoplan.jaxgui.system;
+package de.gedoplan.webclients.system;
 
-import de.gedoplan.jaxgui.model.User;
-import de.gedoplan.jaxgui.service.UserService;
+import de.gedoplan.webclients.model.User;
+import de.gedoplan.webclients.service.UserService;
+import de.gedoplan.webclients.model.User;
+import de.gedoplan.webclients.service.UserService;
 import java.io.Serializable;
 import javax.enterprise.context.RequestScoped;
 import javax.enterprise.inject.Produces;

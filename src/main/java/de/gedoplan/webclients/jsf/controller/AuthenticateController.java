@@ -1,4 +1,4 @@
-package de.gedoplan.jaxgui.jsf.controller;
+package de.gedoplan.webclients.jsf.controller;
 
 import java.security.Principal;
 import javax.enterprise.context.RequestScoped;

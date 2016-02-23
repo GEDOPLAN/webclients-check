@@ -1,5 +1,5 @@
 
-package de.gedoplan.jaxgui.model.dto;
+package de.gedoplan.webclients.model.dto;
 
 import java.util.List;
 

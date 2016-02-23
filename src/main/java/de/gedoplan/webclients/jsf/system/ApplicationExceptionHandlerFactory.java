@@ -1,4 +1,4 @@
-package de.gedoplan.jaxgui.jsf.system;
+package de.gedoplan.webclients.jsf.system;
 
 import javax.faces.context.ExceptionHandler;
 import javax.faces.context.ExceptionHandlerFactory;

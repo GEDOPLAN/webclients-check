@@ -1,13 +1,13 @@
-package de.gedoplan.jaxgui.resource;
+package de.gedoplan.webclients.resource;
 
 import com.fasterxml.jackson.annotation.JsonView;
-import de.gedoplan.jaxgui.model.Customer;
-import de.gedoplan.jaxgui.model.dto.CustomerOrderInformation;
-import de.gedoplan.jaxgui.model.dto.QueryResult;
-import de.gedoplan.jaxgui.model.dto.QuerySettings;
-import de.gedoplan.jaxgui.resource.views.DetailView;
-import de.gedoplan.jaxgui.resource.views.ListView;
-import de.gedoplan.jaxgui.service.CustomerService;
+import de.gedoplan.webclients.model.Customer;
+import de.gedoplan.webclients.model.dto.CustomerOrderInformation;
+import de.gedoplan.webclients.model.dto.QueryResult;
+import de.gedoplan.webclients.model.dto.QuerySettings;
+import de.gedoplan.webclients.resource.views.DetailView;
+import de.gedoplan.webclients.resource.views.ListView;
+import de.gedoplan.webclients.service.CustomerService;
 import javax.inject.Inject;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;

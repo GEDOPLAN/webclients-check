@@ -1,4 +1,4 @@
-package de.gedoplan.jaxgui.jsf.controller;
+package de.gedoplan.webclients.jsf.controller;
 
 import java.text.MessageFormat;
 import java.util.Locale;

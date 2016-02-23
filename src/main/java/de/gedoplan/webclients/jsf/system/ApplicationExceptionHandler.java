@@ -1,6 +1,6 @@
-package de.gedoplan.jaxgui.jsf.system;
+package de.gedoplan.webclients.jsf.system;
 
-import de.gedoplan.jaxgui.jsf.controller.BaseController;
+import de.gedoplan.webclients.jsf.controller.BaseController;
 import java.util.Iterator;
 import java.util.logging.Logger;
 import javax.ejb.EJBAccessException;

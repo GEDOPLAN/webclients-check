@@ -1,4 +1,4 @@
-package de.gedoplan.jaxgui.system;
+package de.gedoplan.webclients.system;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

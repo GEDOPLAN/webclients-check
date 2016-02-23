@@ -1,5 +1,5 @@
 
-package de.gedoplan.jaxgui.resource.views;
+package de.gedoplan.webclients.resource.views;
 
 public class ListView {
 

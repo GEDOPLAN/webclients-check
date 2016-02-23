@@ -1,4 +1,4 @@
-package de.gedoplan.jaxgui.model;
+package de.gedoplan.webclients.model;
 
 import java.io.Serializable;
 import java.util.List;

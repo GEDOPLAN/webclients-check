@@ -1,13 +1,13 @@
-package de.gedoplan.jaxgui.repository;
+package de.gedoplan.webclients.repository;
 
-import de.gedoplan.jaxgui.model.Customer;
-import de.gedoplan.jaxgui.model.Order;
-import de.gedoplan.jaxgui.model.OrderDetail;
-import de.gedoplan.jaxgui.model.OrderDetail_;
-import de.gedoplan.jaxgui.model.Order_;
-import de.gedoplan.jaxgui.model.dto.CustomerOrderInformation;
-import de.gedoplan.jaxgui.model.dto.QueryResult;
-import de.gedoplan.jaxgui.model.dto.QuerySettings;
+import de.gedoplan.webclients.model.Customer;
+import de.gedoplan.webclients.model.Order;
+import de.gedoplan.webclients.model.OrderDetail;
+import de.gedoplan.webclients.model.OrderDetail_;
+import de.gedoplan.webclients.model.Order_;
+import de.gedoplan.webclients.model.dto.CustomerOrderInformation;
+import de.gedoplan.webclients.model.dto.QueryResult;
+import de.gedoplan.webclients.model.dto.QuerySettings;
 import javax.enterprise.context.RequestScoped;
 import javax.persistence.criteria.CollectionJoin;
 import javax.persistence.criteria.CriteriaBuilder;
