@@ -103,6 +103,16 @@
                         </configuration>
                     </execution>
                     <execution>
+                        <id>bower install</id>
+                        <goals>
+                            <goal>bower</goal>
+                        </goals>
+                        <phase>process-resources</phase>
+                        <configuration>
+                            <arguments>install</arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
                         <id>grunt build</id>
                         <goals>
                             <goal>grunt</goal>
