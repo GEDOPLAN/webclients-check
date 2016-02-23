@@ -41,7 +41,7 @@ public class CustomerDetailController implements BaseController,Serializable{
     }
     
     public Customer getCustomer() {
-        if (customer==null)
+        if (customer==null || !customer.getCustomerID().equals(customerID))
         {
             customer=customerService.getCustomerById(customerID);
         }

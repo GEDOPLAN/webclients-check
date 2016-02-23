@@ -1,7 +1,6 @@
 package de.gedoplan.jaxgui.service;
 
 import de.gedoplan.jaxgui.model.Customer;
-import de.gedoplan.jaxgui.model.Order;
 import de.gedoplan.jaxgui.model.User;
 import de.gedoplan.jaxgui.model.dto.CustomerOrderInformation;
 import de.gedoplan.jaxgui.model.dto.QueryResult;
@@ -12,7 +11,6 @@ import javax.annotation.security.RolesAllowed;
 import javax.ejb.EJBAccessException;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
-import javax.ws.rs.WebApplicationException;
 
 @Stateless
 public class CustomerService {

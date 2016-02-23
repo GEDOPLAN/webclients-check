@@ -25,7 +25,9 @@
 
                 <p:menuitem value="#{msg.menu_customer}" outcome="customers" class="nav-item" rendered="#{userController.admin}"/>
                 <p:menuitem value="#{msg.menu_orders}" outcome="orders" class="nav-item"/>
-                <p:menuitem value="#{msg.menu_customerdetails}" outcome="orders" class="nav-item" rendered="#{userController.customer}"/>
+                <p:menuitem value="#{msg.menu_customerdetails}" outcome="customer-details" class="nav-item" rendered="#{userController.customer}">
+                    <f:param name="id" value="#{userController.currentUser.customerID}"/>
+                </p:menuitem>
 
                 <f:facet name="options">
                     <p:menubar styleClass="header-menu-options">

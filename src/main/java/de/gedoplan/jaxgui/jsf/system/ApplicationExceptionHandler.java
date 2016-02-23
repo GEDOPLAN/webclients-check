@@ -1,20 +1,16 @@
 package de.gedoplan.jaxgui.jsf.system;
 
-import java.io.IOException;
+import de.gedoplan.jaxgui.jsf.controller.BaseController;
 import java.util.Iterator;
-import java.util.Map;
-import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.ejb.EJBAccessException;
 import javax.faces.FacesException;
-import javax.faces.application.NavigationHandler;
 import javax.faces.context.ExceptionHandler;
 import javax.faces.context.ExceptionHandlerWrapper;
-import javax.faces.context.FacesContext;
 import javax.faces.event.ExceptionQueuedEvent;
 import javax.faces.event.ExceptionQueuedEventContext;
 
-public class ApplicationExceptionHandler extends ExceptionHandlerWrapper {
+public class ApplicationExceptionHandler extends ExceptionHandlerWrapper implements BaseController {
 
     private static final Logger log = Logger.getLogger(ApplicationExceptionHandler.class.getCanonicalName());
     private ExceptionHandler wrapped;
@@ -37,14 +33,32 @@ public class ApplicationExceptionHandler extends ExceptionHandlerWrapper {
             ExceptionQueuedEventContext context
                     = (ExceptionQueuedEventContext) event.getSource();
 
-            Throwable t = context.getException();
-            if (t instanceof EJBAccessException) {
-                final FacesContext facesContext = FacesContext.getCurrentInstance();
-                facesContext.getApplication().getNavigationHandler().handleNavigation(facesContext, null, "login");
-                i.remove();
+            EJBAccessException ejbAccessException = findException(EJBAccessException.class, context.getException());
+            if (ejbAccessException != null) {
+                String navigationpath;
+
+                if (getRequest().getUserPrincipal() == null) {
+                    navigationpath = "login";
+                    getFacesContext().getApplication().getNavigationHandler().handleNavigation(getFacesContext(), null, navigationpath);
+                    i.remove();
+                }
             }
 
             getWrapped().handle();
         }
+    }
+
+    private <T extends Throwable> T findException(Class<T> exceptionToFind, Throwable thrownException) {
+        Throwable currentException = thrownException;
+        do {
+            if (currentException.getClass().isAssignableFrom(exceptionToFind)) {
+                return (T) currentException;
+            }
+
+            currentException = currentException.getCause();
+
+        } while (currentException != null);
+
+        return null;
     }
 }
