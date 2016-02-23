@@ -3,11 +3,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>de.gedoplan</groupId>
-    <artifactId>JAXGui</artifactId>
+    <artifactId>webclients-check</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
-    <name>JAXGui</name>
+    <name>webclients-check</name>
     
 
     <properties>
@@ -69,7 +69,7 @@
     </dependencies>
     
     <build>
-        <finalName>gedoplan-jax</finalName>
+        <finalName>gedoplan-webclients</finalName>
          
         <plugins>
             <plugin>

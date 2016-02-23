@@ -42,12 +42,12 @@
         <navigation-case>
             <from-outcome>back</from-outcome>
             <to-view-id>jsf/index.xhtml</to-view-id>
-            <if>#{userController.customer}</if>}
+            <if>#{userController.customer}</if>
         </navigation-case>
         <navigation-case>
             <from-outcome>back</from-outcome>
             <to-view-id>jsf/pages/customer/customers.xhtml</to-view-id>
-            <if>#{!userController.customer}</if>}
+            <if>#{!userController.customer}</if>
         </navigation-case>
     </navigation-rule>
     

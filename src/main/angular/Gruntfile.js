@@ -79,7 +79,7 @@ module.exports = function (grunt) {
                 expand: true,
                 cwd: 'dist',
                 src: '**/*',
-                dest: '../../../target/gedoplan-jax/angular/'
+                dest: '../../../target/gedoplan-webclients/angular/'
             }
         },
         connect: {
@@ -97,8 +97,8 @@ module.exports = function (grunt) {
                     {
                         context: ['/webresources', '/bvrules'],
                         rewrite: {
-                            '^/bvrules': '/gedoplan-jax/bvrules',
-                            '^/webresources': '/gedoplan-jax/webresources'
+                            '^/bvrules': '/gedoplan-webclients/bvrules',
+                            '^/webresources': '/gedoplan-webclients/webresources'
                         },
                         host: 'localhost',
                         port: 8080,
