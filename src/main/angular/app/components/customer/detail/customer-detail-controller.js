@@ -1,7 +1,7 @@
 (function () {
     "use strict";
 
-    angular.module("GedoplanJAX.customer.detail", ['ui.router'])
+    angular.module("GedoplanWebClients.customer.detail", ['ui.router'])
             .controller("customer-detail", function (customer, growl, $translate, customerService) {
                 var vm = this;
                 vm.customer = customer;

@@ -1,7 +1,7 @@
 (function () {
     "use strict";
 
-    angular.module("GedoplanJAX.home", [])
+    angular.module("GedoplanWebClients.home", [])
             .controller("home", function () {
                 //var vm = this;
             });

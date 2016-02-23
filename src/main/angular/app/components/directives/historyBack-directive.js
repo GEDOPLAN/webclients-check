@@ -1,6 +1,6 @@
 (function () {
     "use strict";
-    angular.module("GedoplanJAX.directives.historyBack", [])
+    angular.module("GedoplanWebClients.directives.historyBack", [])
             .directive('historyBack', ['$window', function ($window) {
                     return {
                         restrict: 'A',

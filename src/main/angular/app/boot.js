@@ -1,7 +1,7 @@
 (function () {
     "use strict";
     $(document).ready(function () {
-        angular.bootstrap(document, ["GedoplanJAX"]);
+        angular.bootstrap(document, ["GedoplanWebClients"]);
     });
 
 })();

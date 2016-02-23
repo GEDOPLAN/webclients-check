@@ -1,7 +1,7 @@
 (function () {
     "use strict";
 
-    angular.module("GedoplanJAX.services.tablehelper", [])
+    angular.module("GedoplanWebClients.services.tablehelper", [])
             .service("tableHelper", function () {
                 this.parseRestSettings = function (data, settings) {
                     var restSettings = {};

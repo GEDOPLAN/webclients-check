@@ -1,7 +1,7 @@
 (function () {
     "use strict";
 
-    angular.module("GedoplanJAX.services.order", ['ngResource'])
+    angular.module("GedoplanWebClients.services.order", ['ngResource'])
             .service("orderService", function ($resource, restbaseurl) {
 
                 var orderResource = $resource(restbaseurl + "order");

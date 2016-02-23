@@ -1,7 +1,7 @@
 (function () {
     "use strict";
 
-    angular.module("GedoplanJAX.order.template", [])
+    angular.module("GedoplanWebClients.order.template", [])
             .controller("templateController", function (userService, $state, $timeout, $translate) {
                 var vm = this;
 

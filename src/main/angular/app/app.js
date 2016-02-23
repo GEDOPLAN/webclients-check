@@ -1,6 +1,6 @@
 (function () {
     "use strict";
-    var app = angular.module("GedoplanJAX", ['GedoplanJAX.home', 'GedoplanJAX.order.list', 'GedoplanJAX.customer.detail', 'GedoplanJAX.customer.list', 'GedoplanJAX.services.user', 'GedoplanJAX.services.customer', 'ui.router', 'pascalprecht.translate', 'ngResource', 'ngCookies', 'valdr', 'angular-growl', 'GedoplanJAX.directives.historyBack', 'GedoplanJAX.services.interceptors', 'GedoplanJAX.order.template'])
+    var app = angular.module("GedoplanWebClients", ['GedoplanWebClients.home', 'GedoplanWebClients.order.list', 'GedoplanWebClients.customer.detail', 'GedoplanWebClients.customer.list', 'GedoplanWebClients.services.user', 'GedoplanWebClients.services.customer', 'ui.router', 'pascalprecht.translate', 'ngResource', 'ngCookies', 'valdr', 'angular-growl', 'GedoplanWebClients.directives.historyBack', 'GedoplanWebClients.services.interceptors', 'GedoplanWebClients.order.template'])
             .config(function ($stateProvider, $urlRouterProvider, $translateProvider, $httpProvider, valdrProvider, valdrMessageProvider, growlProvider) {
 //Navigation Rules
                 $stateProvider

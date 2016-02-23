@@ -1,7 +1,7 @@
 (function () {
     "use strict";
 
-    angular.module("GedoplanJAX.services.interceptors", [])
+    angular.module("GedoplanWebClients.services.interceptors", [])
             .factory("httpInterceptor", function ($cookies, $injector,  growl, $q) {
                 return {
                     responseError: function (rejection) {

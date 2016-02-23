@@ -1,7 +1,7 @@
 (function () {
     "use strict";
 
-    angular.module("GedoplanJAX.customer.list", ['GedoplanJAX.services.customer'])
+    angular.module("GedoplanWebClients.customer.list", ['GedoplanWebClients.services.customer'])
             .controller("customer-list", function (customerService, tableHelper, $translate, $rootScope, $state) {
 
                 jQuery('#customerlist').DataTable({

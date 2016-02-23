@@ -1,7 +1,7 @@
 (function () {
     "use strict";
 
-    angular.module("GedoplanJAX.services.user", ['ngResource', 'ngCookies'])
+    angular.module("GedoplanWebClients.services.user", ['ngResource', 'ngCookies'])
             .service("userService", function ($resource, restbaseurl, $cookies) {
 
                 var userResource = $resource(restbaseurl + "user");

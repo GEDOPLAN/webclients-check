@@ -1,6 +1,6 @@
 (function () {
     "use strict";
-    angular.module("GedoplanJAX.order.list", ['GedoplanJAX.services.order', 'GedoplanJAX.services.tablehelper'])
+    angular.module("GedoplanWebClients.order.list", ['GedoplanWebClients.services.order', 'GedoplanWebClients.services.tablehelper'])
             .controller("order-list", function (orderService, tableHelper, $filter, $translate, $rootScope) {
                 jQuery('#orderlist').DataTable({
                     ajax: function (data, callback, settings) {
