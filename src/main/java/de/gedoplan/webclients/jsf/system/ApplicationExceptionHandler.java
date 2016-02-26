@@ -1,6 +1,7 @@
 package de.gedoplan.webclients.jsf.system;
 
 import de.gedoplan.webclients.jsf.controller.BaseController;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.logging.Logger;
 import javax.ejb.EJBAccessException;
@@ -16,7 +17,7 @@ public class ApplicationExceptionHandler extends ExceptionHandlerWrapper impleme
     private ExceptionHandler wrapped;
 
     ApplicationExceptionHandler(ExceptionHandler exception) {
-        this.wrapped = exception;
+       this.wrapped = exception;
     }
 
     @Override

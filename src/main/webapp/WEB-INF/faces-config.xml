@@ -54,7 +54,7 @@
     
     <factory>
         <exception-handler-factory>
-            de.gedoplan.jaxgui.jsf.system.ApplicationExceptionHandlerFactory
+            de.gedoplan.webclients.jsf.system.ApplicationExceptionHandlerFactory
         </exception-handler-factory>
     </factory>
     
