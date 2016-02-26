@@ -26,12 +26,7 @@
                             url: '/customer/detail/{id}',
                             templateUrl: 'components/customer/detail/customer-detail.html',
                             controller: 'customer-detail',
-                            controllerAs: 'vm',
-                            resolve: {
-                                customer: function (customerService, $stateParams) {
-                                    return customerService.getCustomerDetail($stateParams.id).$promise;
-                                }
-                            }
+                            controllerAs: 'vm'
                         })
                         .state('app.customer-list', {
                             url: '/customer',
