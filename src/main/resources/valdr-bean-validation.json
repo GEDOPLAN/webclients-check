@@ -1,4 +1,4 @@
 {
-  "modelPackages": ["de.gedoplan.jaxgui.model"],
+  "modelPackages": ["de.gedoplan.webclients.model"],
   "outputFullTypeName": false
 }

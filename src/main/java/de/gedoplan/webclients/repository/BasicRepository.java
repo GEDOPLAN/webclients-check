@@ -15,7 +15,7 @@ import javax.persistence.metamodel.SingularAttribute;
 
 abstract class BasicRepository<ENTITY, ID> {
 
-    @PersistenceContext(name = "default")
+    @PersistenceContext(name = "webclients")
     EntityManager entityManager;
 
     private final Class<ENTITY> entityClass;

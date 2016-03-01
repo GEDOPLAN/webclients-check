@@ -1,7 +1,6 @@
 package de.gedoplan.webclients.jsf.system;
 
 import de.gedoplan.webclients.jsf.controller.BaseController;
-import java.util.HashMap;
 import java.util.Iterator;
 import java.util.logging.Logger;
 import javax.ejb.EJBAccessException;
@@ -17,7 +16,7 @@ public class ApplicationExceptionHandler extends ExceptionHandlerWrapper impleme
     private ExceptionHandler wrapped;
 
     ApplicationExceptionHandler(ExceptionHandler exception) {
-       this.wrapped = exception;
+        this.wrapped = exception;
     }
 
     @Override
@@ -36,11 +35,11 @@ public class ApplicationExceptionHandler extends ExceptionHandlerWrapper impleme
 
             EJBAccessException ejbAccessException = findException(EJBAccessException.class, context.getException());
             if (ejbAccessException != null) {
-                String navigationpath;
-
                 if (getRequest().getUserPrincipal() == null) {
-                    navigationpath = "login";
-                    getFacesContext().getApplication().getNavigationHandler().handleNavigation(getFacesContext(), null, navigationpath);
+                    getFacesContext().getApplication().getNavigationHandler().handleNavigation(getFacesContext(), null, "login");
+                    i.remove();
+                } else {
+                    getFacesContext().getApplication().getNavigationHandler().handleNavigation(getFacesContext(), null, "notallowed");
                     i.remove();
                 }
             }

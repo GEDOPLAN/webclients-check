@@ -15,15 +15,15 @@ public interface BaseController {
     }
 
     public default void addErrorMessage(String key) {
-        this.getFacesContext().addMessage(null, getMessage(FacesMessage.SEVERITY_ERROR, key));
+        this.getFacesContext().addMessage(null, createFacesMessage(FacesMessage.SEVERITY_ERROR, key));
     }
 
     public default void addErrorMessage(String key, Object[] args) {
-        this.getFacesContext().addMessage(null, getMessage(FacesMessage.SEVERITY_ERROR, key, args));
+        this.getFacesContext().addMessage(null, createFacesMessage(FacesMessage.SEVERITY_ERROR, key, args));
     }
 
     public default void addErrorMessage(String componentId, String key, Object[] args) {
-        this.getFacesContext().addMessage(componentId, getMessage(FacesMessage.SEVERITY_ERROR, key, args));
+        this.getFacesContext().addMessage(componentId, createFacesMessage(FacesMessage.SEVERITY_ERROR, key, args));
     }
 
     public default void addErrorMessage(String componentId, String message) {
@@ -31,15 +31,15 @@ public interface BaseController {
     }
 
     public default void addInfoMessage(String key) {
-        this.getFacesContext().addMessage(null, getMessage(FacesMessage.SEVERITY_INFO, key));
+        this.getFacesContext().addMessage(null, createFacesMessage(FacesMessage.SEVERITY_INFO, key));
     }
 
     public default void addInfoMessage(String key, Object[] args) {
-        this.getFacesContext().addMessage(null, getMessage(FacesMessage.SEVERITY_INFO, key, args));
+        this.getFacesContext().addMessage(null, createFacesMessage(FacesMessage.SEVERITY_INFO, key, args));
     }
 
     public default void addInfoMessage(String componentId, String key, Object[] args) {
-        this.getFacesContext().addMessage(componentId, getMessage(FacesMessage.SEVERITY_INFO, key, args));
+        this.getFacesContext().addMessage(componentId, createFacesMessage(FacesMessage.SEVERITY_INFO, key, args));
     }
 
     public default void addInfoMessage(String componentId, String message) {
@@ -47,15 +47,15 @@ public interface BaseController {
     }
 
     public default void addWarnMessage(String key) {
-        this.getFacesContext().addMessage(null, getMessage(FacesMessage.SEVERITY_WARN, key));
+        this.getFacesContext().addMessage(null, createFacesMessage(FacesMessage.SEVERITY_WARN, key));
     }
 
     public default void addWarnMessage(String key, Object[] args) {
-        this.getFacesContext().addMessage(null, getMessage(FacesMessage.SEVERITY_WARN, key, args));
+        this.getFacesContext().addMessage(null, createFacesMessage(FacesMessage.SEVERITY_WARN, key, args));
     }
 
     public default void addWarnMessage(String componentId, String key, Object[] args) {
-        this.getFacesContext().addMessage(componentId, getMessage(FacesMessage.SEVERITY_WARN, key, args));
+        this.getFacesContext().addMessage(componentId, createFacesMessage(FacesMessage.SEVERITY_WARN, key, args));
     }
 
     public default void addWarnMessage(String componentId, String message) {
@@ -70,9 +70,13 @@ public interface BaseController {
         return this.getFacesContext().getExternalContext();
     }
 
-    public default FacesMessage getMessage(FacesMessage.Severity severity, String key, Object... args) {
-        String msg = MessageFormat.format(getBundle().getString(key), args);
+    public default FacesMessage createFacesMessage(FacesMessage.Severity severity, String key, Object... args) {
+        String msg = getMessage(key, args);
         return new FacesMessage(severity, msg, "");
+    }
+
+    default String getMessage(String key, Object...args) {
+        return MessageFormat.format(getBundle().getString(key), args);
     }
 
     public default ResourceBundle getBundle() {
