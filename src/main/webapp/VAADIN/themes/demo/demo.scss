@@ -1,0 +1,41 @@
+@import "../valo/valo.scss";
+
+@mixin demo {
+
+    @include valo;
+
+    .v-menubar > .v-menubar-menuitem-logo .v-icon {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .v-menubar > .v-menubar-menuitem-align-right {
+        position:absolute;
+        right:10px;
+    }
+
+    .v-menubar > .v-menubar-menuitem {
+        height:88px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .v-menubar-main {
+        height:auto;    
+    }
+
+    .v-caption-form {
+        font-weight: bold;
+    }
+
+    .v-gridlayout-spacing-on {
+        width: 20px;
+        height: 20px;
+    }
+
+
+    .v-verticallayout-page {
+        min-height: 100%;
+    }
+}
