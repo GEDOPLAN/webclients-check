@@ -1,87 +1,6 @@
 module.exports = function (grunt) {
-    require('load-grunt-tasks')(grunt);
-    var proxySnippet = require('grunt-connect-proxy/lib/utils').proxyRequest;
+    // Project configuration.
     grunt.initConfig({
-        jshint: {
-            options: {
-                jshintrc: '.jshintrc'
-            },
-            all: {
-                src: "app/{,components/**/, services/, resources/}*.js"
-            }
-        },
-        clean: {
-            tmp: ['.tmp', 'app/*.tmp', 'app/.tmp']
-        },
-        injector: {
-            options: {
-                bowerPrefix: 'bower:',
-                template: 'app/index.html',
-                ignorePath: 'app',
-                addRootSlash: false,
-                lineEnding: grunt.util.linefeed
-            },
-            development: {
-                files: {
-                    'app/index.html': [
-                        'bower.json', 
-                        'app/{,components/**/,services/,resources/}*.js', 
-                        'app/bower_components/font-awesome/css/font-awesome.css',
-                        'app/assets/styles/template.css',
-                        'app/assets/styles/main.css'
-                    ]
-                }
-            },
-            annotated: {
-                files: {
-                    'app/index.html': ['bower.json', 'app/.tmp/scripts/**/*.js', 'app/assets/styles/*.css']
-                }
-            },
-            build: {
-                options: {
-                    template: 'dist/index.html',
-                    ignorePath: 'dist',
-                },
-                files: {
-                    'dist/index.html': ['dist/assets/**/*.css', 'dist/scripts/*.js']
-                }
-            }
-        },
-        ngAnnotate: {
-            build: {
-                files: [{
-                        expand: true,
-                        src: 'app/{,components/**/,services/,resources/}*.js',
-                        ext: '.annotated.js',
-                        dest: 'app/.tmp/scripts'
-                    }]
-            }
-        },
-        watch: {
-            index: {
-                files: ['bower.json', 'app/index.html', 'app/**/*.js', 'app/**/*.html', 'app/assets/**/*.css'],
-                options: {
-                    livereload: true,
-                }
-            }
-        },
-        copy: {
-            build: {
-                expand: true,
-                cwd: 'app',
-                src: [
-                    '{,components/**/}*.html',
-                    'assets/{fonts,img,i18n}/**'
-                ],
-                dest: 'dist/'
-            },
-            final: {
-                expand: true,
-                cwd: 'dist',
-                src: '**/*',
-                dest: '../../../target/gedoplan-webclients/angular/'
-            }
-        },
         connect: {
             server: {
                 options: {
@@ -108,51 +27,102 @@ module.exports = function (grunt) {
                 ]
             }
         },
-        uglify: {
-            generated: {
-                options: {
-                    sourceMap: true
-                }
+        ngAnnotate: {
+            build: {
+                files: [{
+                        expand: true,
+                        src: ['app/{services,components}/**/*.js','app/*.js'],
+                        dest: '.tmp'
+                    }]
             }
         },
         useminPrepare: {
             html: 'app/index.html',
             options: {
-                staging: 'app/.tmp',
                 dest: 'dist'
             }
         },
         usemin: {
-            html: ['dist/index.html'],
-            css: ['dist/assets/styles/*.css'],
-            js: ['dist/scripts/*.js'],
+            html: ['dist/{,*/}*.html'],
+            css: ['dist/styles/{,*/}*.css'],
+            js: ['dist/scripts/{,*/}*.js']
+        },
+        clean: {
+            dist: ['.tmp', 'dist', '*.war']
+        },
+        copy: {
+            html: {
+                src: '{,**/}*.html',
+                expand: true,
+                cwd: 'app',
+                dest: 'dist/'
+            },
+            index: {
+                src: 'index.html',
+                expand: true,
+                cwd: 'app',
+                dest: 'dist/'
+            },
+            assets: {
+                src: '{fonts,i18n,img}/**',
+                expand: true,
+                cwd: 'app/assets',
+                dest: 'dist/assets'
+            },
+            final: {
+                src: '**',
+                expand: true,
+                cwd: 'dist',
+                dest: '../../../target/gedoplan-webclients/angular/'
+            }
+        },
+        watch: {
             options: {
-                assetsDirs: ['dist', 'dist/assets/styles', 'dist/scripts']
+                livereload: true
+            },
+            development: {
+                files: ['app/**'],
+                tasks: []
             }
         }
     });
-    grunt.registerTask("development", [
-        'injector:development',
+
+    grunt.loadNpmTasks('grunt-contrib-connect');
+    grunt.loadNpmTasks('grunt-usemin');
+    grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-filerev');
+    grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-ng-annotate');
+    grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-maven-tasks');
+    grunt.loadNpmTasks('grunt-connect-proxy');
+
+    grunt.registerTask('build:usemin', [
+        'clean:dist',
+        'copy:html',
+        'copy:index',
+        'copy:assets',
+        'ngAnnotate:build',
+        'useminPrepare',
+        'concat',
+        'uglify',
+        'cssmin',
+        'usemin'
+    ]);
+
+    grunt.registerTask("start", [
         'configureProxies:server',
         'connect:server',
-        'watch:index'
+        'watch:development'
+    ]);
 
-    ]);
-    grunt.registerTask('build', [
-        'clean:tmp',
-        'injector:development',
-        'jshint:all',
-        'ngAnnotate:build',
-        'injector:annotated',
-        'useminPrepare',
-        'concat:generated',
-        'cssmin:generated',
-        'uglify:generated',
-        'copy:build',
-        'usemin',
-        'injector:build',
+    grunt.registerTask("build", [
+        'build:usemin',
         'copy:final',
-        'clean:tmp',
-        'injector:development'
+        'clean:dist'
     ]);
+
 };

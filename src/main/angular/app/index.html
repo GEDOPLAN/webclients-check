@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="GedoplanWebClients">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
@@ -12,20 +12,16 @@
         <link rel="icon" href="assets/img/favicon.ico" />
         <title>gedoplan - jax</title>
 
-        <!-- build:css assets/styles/ext.css -->
-        <!-- injector:bower:css -->
+        <!-- build:css assets/style/ext.css -->
         <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
         <link rel="stylesheet" href="bower_components/datatables.net-bs/css/dataTables.bootstrap.css">
         <link rel="stylesheet" href="bower_components/angular-growl-v2/build/angular-growl.css">
-        <!-- endinjector -->
+        <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
         <!-- endbuild -->
         
-        <!-- build:css assets/styles/styles.css -->
-        <!-- injector:css -->
-        <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
+        <!-- build:css assets/style/main.css -->
         <link rel="stylesheet" href="assets/styles/template.css">
         <link rel="stylesheet" href="assets/styles/main.css">
-        <!-- endinjector -->
         <!-- endbuild -->
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -38,8 +34,7 @@
     <body>
         <div ui-view></div>
 
-        <!-- build:js scripts/ext.js -->
-        <!-- injector:bower:js -->
+        <!--build:js scripts/ext.js -->
         <script src="bower_components/jquery/dist/jquery.js"></script>
         <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
         <script src="bower_components/angular/angular.js"></script>
@@ -54,13 +49,10 @@
         <script src="bower_components/valdr/valdr.js"></script>
         <script src="bower_components/valdr/valdr-message.js"></script>
         <script src="bower_components/angular-growl-v2/build/angular-growl.js"></script>
-        <!-- endinjector -->
         <!-- endbuild -->
 
-        <!-- build:js scripts/modules.js -->
-        <!-- injector:js -->
+        <!--build:js(.tmp/app) scripts/main.js -->
         <script src="app.js"></script>
-        <script src="boot.js"></script>
         <script src="components/customer/detail/customer-detail-controller.js"></script>
         <script src="components/customer/list/customer-list-controller.js"></script>
         <script src="components/directives/historyBack-directive.js"></script>
@@ -72,12 +64,6 @@
         <script src="services/orderService.js"></script>
         <script src="services/tableHelperService.js"></script>
         <script src="services/userService.js"></script>
-        <!-- endinjector -->
         <!-- endbuild -->
-
-
-
-        <script src="//localhost:35729/livereload.js"></script>
-
     </body>
 </html>
