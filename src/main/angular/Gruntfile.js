@@ -6,7 +6,7 @@ module.exports = function (grunt) {
                 options: {
                     port: 3000,
                     base: 'app',
-                    keepalive: false,
+                    livereload: true,
                     middleware: function (connect, options, middlewares) {
                         middlewares.unshift(require('grunt-connect-proxy/lib/utils').proxyRequest);
                         return middlewares;
@@ -77,14 +77,13 @@ module.exports = function (grunt) {
             }
         },
         watch: {
-            options: {
-                livereload: true
-            },
             development: {
-                files: ['app/**'],
-                tasks: []
+                files: ['bower.json', 'app/index.html', 'app/**/*.js', 'app/**/*.html', 'app/assets/**/*.css'],
+                options: {
+                    livereload: true,
+                }
             }
-        }
+        },
     });
 
     grunt.loadNpmTasks('grunt-contrib-connect');
