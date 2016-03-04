@@ -15,7 +15,7 @@
                 };
 
                 this.logout = function () {
-                    $cookies.remove("authToken");
+                    $cookies.putObject("authToken", "Basic " + btoa("logout:logout"));
                     if (bowser.msie) {
                         document.execCommand('ClearAuthenticationCache', 'false');
                     } else if (bowser.gecko) {
