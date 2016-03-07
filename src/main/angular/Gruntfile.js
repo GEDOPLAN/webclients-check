@@ -6,6 +6,7 @@ module.exports = function (grunt) {
                 options: {
                     port: 3000,
                     base: 'app',
+                    hostname: 'localhost',
                     livereload: true,
                     middleware: function (connect, options, middlewares) {
                         middlewares.unshift(require('grunt-connect-proxy/lib/utils').proxyRequest);
