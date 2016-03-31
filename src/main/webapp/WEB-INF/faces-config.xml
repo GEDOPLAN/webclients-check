@@ -8,33 +8,33 @@
         <from-view-id>*</from-view-id>
         <navigation-case>
             <from-outcome>home</from-outcome>
-            <to-view-id>jsf/index.xhtml</to-view-id>
+            <to-view-id>/jsf/index.xhtml</to-view-id>
             <redirect/>
         </navigation-case>
         <navigation-case>
             <from-outcome>login</from-outcome>
-            <to-view-id>jsf/login.xhtml</to-view-id>
+            <to-view-id>/jsf/login.xhtml</to-view-id>
             <redirect/>
         </navigation-case>
         <navigation-case>
             <from-outcome>customers</from-outcome>
-            <to-view-id>jsf/pages/customer/customers.xhtml</to-view-id>
+            <to-view-id>/jsf/pages/customer/customers.xhtml</to-view-id>
         </navigation-case>
         <navigation-case>
             <from-outcome>customer-details</from-outcome>
-            <to-view-id>jsf/pages/customer/customer_details.xhtml</to-view-id>
+            <to-view-id>/jsf/pages/customer/customer_details.xhtml</to-view-id>
         </navigation-case>
         <navigation-case>
             <from-outcome>customer-details</from-outcome>
-            <to-view-id>jsf/pages/customer/customer-details.xhtml</to-view-id>
+            <to-view-id>/jsf/pages/customer/customer-details.xhtml</to-view-id>
         </navigation-case>
         <navigation-case>
             <from-outcome>orders</from-outcome>
-            <to-view-id>jsf/pages/order/orders.xhtml</to-view-id>
+            <to-view-id>/jsf/pages/order/orders.xhtml</to-view-id>
         </navigation-case>
         <navigation-case>
             <from-outcome>notallowed</from-outcome>
-            <to-view-id>jsf/notallowed.xhtml</to-view-id>
+            <to-view-id>/jsf/notallowed.xhtml</to-view-id>
             <redirect/>
         </navigation-case>
     </navigation-rule>
@@ -42,12 +42,12 @@
         <from-view-id>jsf/pages/customer/customer_details.xhtml</from-view-id>
         <navigation-case>
             <from-outcome>back</from-outcome>
-            <to-view-id>jsf/index.xhtml</to-view-id>
+            <to-view-id>/jsf/index.xhtml</to-view-id>
             <if>#{userController.customer}</if>
         </navigation-case>
         <navigation-case>
             <from-outcome>back</from-outcome>
-            <to-view-id>jsf/pages/customer/customers.xhtml</to-view-id>
+            <to-view-id>/jsf/pages/customer/customers.xhtml</to-view-id>
             <if>#{!userController.customer}</if>
         </navigation-case>
     </navigation-rule>
@@ -66,7 +66,7 @@
         </resource-bundle>
     </application>
     
-    <!--    <application>
+      <application>
         <resource-handler>org.omnifaces.resourcehandler.CombinedResourceHandler</resource-handler>
-    </application>-->
+    </application>
 </faces-config>
