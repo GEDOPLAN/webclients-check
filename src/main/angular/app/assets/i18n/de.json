@@ -1,7 +1,8 @@
 {
     "actions": {
         "save": "speichern",
-        "cancel": "abbrechen"
+        "cancel": "abbrechen",
+        "login" : "login"
     },
     "login": {
         "username": "Benutzername",
