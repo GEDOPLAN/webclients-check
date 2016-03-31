@@ -22,8 +22,8 @@ import javax.servlet.annotation.WebServlet;
     @WebInitParam(name = "productionMode", value = "true"),
     @WebInitParam(name = "resourceCacheTime", value = "3600"),
     @WebInitParam(name = "widgetset", value = "demowidgets"), //Einkommentieren für Testen mit JMeter
- //    @WebInitParam(name = "disable-xsrf-protection", value = "true"),
-//    @WebInitParam(name = "syncIdCheck", value = "false")
+     @WebInitParam(name = "disable-xsrf-protection", value = "true"),
+    @WebInitParam(name = "syncIdCheck", value = "false")
 })
 public class DemoServlet extends VaadinCDIServlet {
 
