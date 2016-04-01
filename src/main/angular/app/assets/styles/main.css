@@ -97,3 +97,19 @@ input.ng-invalid.ng-touched.ng-dirty, input.ng-invalid.ng-touched.ng-dirty:focus
 span.btn-primary{
     padding: 5px;
 }
+
+.dropdown-menu > li > wcc-logout > a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: normal;
+    line-height: 1.42857143;
+    color: #333;
+    white-space: nowrap;
+}
+
+.dropdown-menu > li > wcc-logout> a:hover, .dropdown-menu > li > wcc-logout > a:focus {
+    color: #262626;
+    text-decoration: none;
+    background-color: #f5f5f5;
+}

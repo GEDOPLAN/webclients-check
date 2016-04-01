@@ -1,13 +1,13 @@
 (function () {
     "use strict";
-    var app = angular.module("GedoplanWebClients", ['GedoplanWebClients.home', 'GedoplanWebClients.order.list', 'GedoplanWebClients.customer.detail', 'GedoplanWebClients.customer.list', 'GedoplanWebClients.services.user', 'GedoplanWebClients.services.customer', 'ui.router', 'pascalprecht.translate', 'ngResource', 'ngCookies', 'valdr', 'angular-growl', 'GedoplanWebClients.directives.historyBack', 'GedoplanWebClients.services.interceptors', 'GedoplanWebClients.order.template'])
+    var app = angular.module("GedoplanWebClients", ['GedoplanWebClients.home', 'GedoplanWebClients.order.list', 'GedoplanWebClients.customer.detail', 'GedoplanWebClients.customer.list', 'GedoplanWebClients.services.user', 'GedoplanWebClients.services.customer', 'ui.router', 'pascalprecht.translate', 'ngResource', 'ngCookies', 'valdr', 'angular-growl', 'GedoplanWebClients.directives.historyBack', 'GedoplanWebClients.services.interceptors', 'GedoplanWebClients.template', 'GedoplanWebClients.login'])
             .config(function ($stateProvider, $urlRouterProvider, $translateProvider, $httpProvider, valdrProvider, valdrMessageProvider, growlProvider) {
 //Navigation Rules
                 $stateProvider
                         .state('login', {
                             url: '/login',
-                            templateUrl: 'login.html',
-                            controller: 'templateController',
+                            templateUrl: 'components/login/login.html',
+                            controller: 'login',
                             controllerAs: 'vm'
                         })
                         .state('app', {
