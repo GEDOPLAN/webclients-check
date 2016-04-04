@@ -18,7 +18,6 @@ public class OrderController extends BaseTableController<Order> implements BaseC
 
     @Override
     public QueryResult<Order> loadData(Integer pageSize, Integer pageStart, String[] sortAttributes, String[] sortDirections) {
-        System.out.println("de.gedoplan.webclients.jsf.controller.OrderController.loadData()");
         QuerySettings querySettings = new QuerySettings(pageStart, pageSize, sortAttributes, sortDirections);
         QueryResult<Order> queryResult = customerService.queryOrders(querySettings);
 
