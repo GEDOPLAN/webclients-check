@@ -7,3 +7,8 @@
 /src/main/angular/.tmp/
 /src/main/angular/nbproject/private/
 /src/main/angular/nbproject/
+/.settings/
+/bin/
+/.classpath
+/.project
+/.tern-project
