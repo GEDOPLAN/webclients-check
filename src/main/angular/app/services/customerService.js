@@ -6,7 +6,8 @@
 
                 var customerResource = $resource(restbaseurl + "customer", null, {
                     details: {method: 'GET', url: restbaseurl + 'customer/detail/:id', params: {id: '@id'}},
-                    discount: {method: 'GET', url: restbaseurl + 'customer/discount/:id', params: {id: '@id'}}
+                    discount: {method: 'GET', url: restbaseurl + 'customer/discount/:id', params: {id: '@id'}},
+                    update: {method: 'PUT'}
                 });
 
                 this.getCustomer = function (settings) {

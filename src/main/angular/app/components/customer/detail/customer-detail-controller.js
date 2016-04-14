@@ -10,7 +10,7 @@
                 });
 
                 vm.saveCustomer = function () {
-                    vm.customer.$save().then(function () {
+                    vm.customer.$update().then(function () {
                         growl.info($translate.instant("save-success"));
                     });
                 };
