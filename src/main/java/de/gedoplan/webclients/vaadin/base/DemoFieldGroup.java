@@ -6,7 +6,6 @@
 package de.gedoplan.webclients.vaadin.base;
 
 import com.vaadin.ui.Field;
-import de.gedoplan.webclients.model.Customer;
 import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -34,7 +33,7 @@ public class DemoFieldGroup<T> extends MBeanFieldGroup<T> {
                 if (notNullAnnotation != null) {
                     field.setRequired(true);
                     // Hack, keine vernünftige Lokalisierung, da müsste eigentlich mit dem MessageInterpolator gearbeitet werden
-                    Set<ConstraintViolation<Customer>> violations = Validation.buildDefaultValidatorFactory().getValidator().validateValue(nonHiddenBeanType, property.toString(), null);
+                    Set<ConstraintViolation<T>> violations = Validation.buildDefaultValidatorFactory().getValidator().validateValue(nonHiddenBeanType, property.toString(), null);
                     field.setRequiredError(violations.stream().filter(v -> v.getConstraintDescriptor().getAnnotation().annotationType().equals(NotNull.class)).findFirst().get().getMessage());
                 }
             } catch (NoSuchFieldException | SecurityException ex) {
