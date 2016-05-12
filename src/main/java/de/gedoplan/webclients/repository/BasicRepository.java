@@ -61,8 +61,7 @@ abstract class BasicRepository<ENTITY, ID> {
     }
 
     protected ENTITY merge(ENTITY entity) {
-        this.entityManager.merge(entity);
-        return entity;
+        return this.entityManager.merge(entity);
     }
 
     protected void delete(Integer id) {
