@@ -4,7 +4,6 @@ import de.gedoplan.webclients.model.Customer;
 import de.gedoplan.webclients.model.dto.CustomerOrderInformation;
 import de.gedoplan.webclients.service.CustomerService;
 import java.io.Serializable;
-import javax.ejb.EJBAccessException;
 import javax.enterprise.context.SessionScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
