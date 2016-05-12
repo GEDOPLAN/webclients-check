@@ -1,7 +1,7 @@
 (function () {
     "use strict";
     angular.module('GedoplanWebClients.login', [])
-            .controller("login", function (userService, $translate, $state, $timeout, $scope) {
+            .controller("login", function (userService, $translate, $state, $timeout) {
                 var vm = this;
 
                 vm.login = function () {
