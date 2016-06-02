@@ -51,7 +51,8 @@ public class CustomerResource {
     }
 
     @PUT
-    public Customer updateCustomer(Customer customer) {
+    @JsonView(DetailView.class)
+    public Customer updateCustomer(@JsonView(DetailView.class) Customer customer) {
         return customerService.updateCustomer(customer);
     }
 
