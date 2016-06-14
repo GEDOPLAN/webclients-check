@@ -10,3 +10,6 @@ Also dann HTML+JS+CSS, vielleicht mit ein bisschen AngularJS? Wie integriert sic
 Und was ist mit Vaadin als serverzentrierte Präsentation ohne Zwang zu einer weiteren Sprache neben Java? 
 
 Dieses Projekt liefert in jedem der genannten Frameworks ein Beispiel, mit einheitlichem Backend.
+
+Beispieldatenbank, Northwind:
+https://code.google.com/archive/p/northwindextended/downloads
