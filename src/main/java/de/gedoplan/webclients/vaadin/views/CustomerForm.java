@@ -37,7 +37,7 @@ public class CustomerForm extends VerticalLayout {
 
     private TextField id;
     private TextField name;
-   private TextField kontakt;
+    private TextField kontakt;
     private TextField strasse;
     private TextField plz;
     private TextField stadt;
