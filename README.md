@@ -1,6 +1,6 @@
 # webclients-check
 
-#Wie viel Client braucht das Web?
+#Enterprise UI - Wie schlau soll mein Browser sein?
 
 
 Fullstack-Java-EE-Anwendungen schreibt man mit JSF, zumindest im Standard. 
