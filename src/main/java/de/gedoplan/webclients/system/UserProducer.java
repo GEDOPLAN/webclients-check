@@ -19,6 +19,7 @@ public class UserProducer implements Serializable {
 
     @Produces
     @CurrentUser
+    @RequestScoped
     public User getUser() {
         this.user = userService.loadUser();
 
